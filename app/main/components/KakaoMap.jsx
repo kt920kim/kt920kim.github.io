@@ -1,5 +1,5 @@
-import Script from 'next/script';
-import { Map, MapMarker  } from 'react-kakao-maps-sdk';
+import Script from "next/script";
+import { Map, MapMarker  } from "react-kakao-maps-sdk";
 
 const KAKAO_SDK_URL = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.__NEXT_KAKAO_JAVASCRIPT_KEY}&libraries=services,clusterer&autoload=false`;
 
