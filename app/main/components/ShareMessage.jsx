@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Script from "next/script";
+import { useSearchParams } from "next/navigation"
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useMemo } from "react";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 import KakaoTalk from "../../../public/images/kakaotalk.png";
@@ -11,6 +12,17 @@ import Link from "../../../public/images/link.png";
 
 const ShareMessage = () => {
   const [webPageLink, setWebPageLink] = useState("");
+
+  const searchParams = useSearchParams();
+
+  const shareButtons = useMemo(() => {
+    const params = searchParams.get('share');
+    return params?.split(",") || [];
+  }, [searchParams]);
+
+  if (shareButtons.length === 0) {
+    return (<></>);
+  }
 
   const handleKakaoTalkShare = () => {
     Kakao.Share.createDefaultButton({
@@ -27,31 +39,40 @@ const ShareMessage = () => {
 
   return (
     <>
-      <Script
-        src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
-        integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-        onLoad={() => {
-          Kakao.init("b26e186abb61e7b9ce1010719b5d31e7");
-        }}
-      />
+      {
+        (shareButtons.findIndex(item => item === "kakaotalk") > -1 ) &&
+        <Script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+          integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+          onLoad={() => {
+            Kakao.init("b26e186abb61e7b9ce1010719b5d31e7");
+          }}
+        />
+      }
 
       <section className="share-message w-full flex flex-col justify-center items-center py-[30px] bg-[#F5EEE1]">
-        <div className="share-by-kakaotalk flex flex-row text-[15px] leading-[19px] mb-4 font-S-Core_Dream">
-          <Image src={KakaoTalk} alt="카카오톡" width={24} height={24} />
-          <button id="kakaotalk-sharing-btn" className="ml-2" onClick={handleKakaoTalkShare}>카카오톡 공유하기</button>
-        </div>
-        <div className="share-by-link flex flex-row text-[15px] leading-[19px] mb-4 font-S-Core_Dream">
-          <Image src={Link} alt="링크주소" width={24} height={24} />
-          {/* <button className="ml-2" onClick={handleLinkShare}>링크주소 공유하기</button> */}
-          <CopyToClipboard
-            text={webPageLink}
-            onCopy={() => { setWebPageLink(window.location.href || ""); alert("복사되었습니다."); }}
-          >
-            <button className="ml-2">링크주소 공유하기</button>
-          </CopyToClipboard>
-        </div>
+        {
+          (shareButtons.findIndex(item => item === "kakaotalk") > -1 ) &&
+          <div className="share-by-kakaotalk flex flex-row text-[15px] leading-[19px] mb-4 font-S-Core_Dream">
+            <Image src={KakaoTalk} alt="카카오톡" width={24} height={24} />
+            <button id="kakaotalk-sharing-btn" className="ml-2" onClick={handleKakaoTalkShare}>카카오톡 공유하기</button>
+          </div>
+        }
+        {
+          (shareButtons.findIndex(item => item === "link") > -1 ) &&
+          <div className="share-by-link flex flex-row text-[15px] leading-[19px] mb-4 font-S-Core_Dream">
+            <Image src={Link} alt="링크주소" width={24} height={24} />
+            {/* <button className="ml-2" onClick={handleLinkShare}>링크주소 공유하기</button> */}
+            <CopyToClipboard
+              text={webPageLink}
+              onCopy={() => { setWebPageLink(window.location.href || ""); alert("복사되었습니다."); }}
+            >
+              <button className="ml-2">링크주소 공유하기</button>
+            </CopyToClipboard>
+          </div>
+        }
       </section>
     </>
   );

@@ -28,7 +28,7 @@ const Location = () => {
           <li className="self-stretch not-italic font-normal text-[15px] leading-[21px] font-S-Core_Dream">버스: 관악고등학교 정류소 하차 (640, 650, 5012, 5616, 6211, 6625, 6628, 6629, 6630, 6640B)</li>
         </ol>
       </section>
-      <section className="location-how-drivecar w-full flex flex-col items-start gap-2 px-5">
+      <section className="location-how-drivecar w-full flex flex-col items-start gap-2 px-5 pb-5">
         <div className="location-how2-section-text1 flex flex-col self-stretch not-italic font-extrabold text-[16px] leading-5 font-S-Core_Dream">자가용</div>
         <div className="location-how2-section-text2 flex flex-col self-stretch not-italic font-normal text-[15px] leading-[21px] font-S-Core_Dream">
           네비게이션 이용 시 “플로렌스 오목교점”을 입력하세요. (주차 2시간 30분 무료)
