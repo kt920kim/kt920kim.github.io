@@ -38,7 +38,7 @@ const Accounts = () => {
           (accounts.findIndex(item => item === 'groom') > -1) &&
           <div
             className="congratulatory-section-groom-btn flex text-center items-center justify-center gap-[10px] rounded-lg px-3 py-[10px] not-italic font-normal text-[15px] leading-[21px] uppercase font-S-Core_Dream"
-            onClick={() => { console.log("groom's accounts"); accountClick(GROOM_ACCOUNTS_DATA); }}
+            onClick={() => { accountClick(GROOM_ACCOUNTS_DATA); }}
           >
             신랑층 계좌번호
           </div>
@@ -47,7 +47,7 @@ const Accounts = () => {
           (accounts.findIndex(item => item === 'bride') > -1) &&
           <div
             className="congratulatory-section-bride-btn flex text-center items-center justify-center gap-[10px] rounded-lg px-3 py-[10px] not-italic font-normal text-[15px] leading-[21px] uppercase font-S-Core_Dream"
-            onClick={() => { console.log("bride's accounts"); accountClick(BRIDE_ACCOUNTS_DATA); }}
+            onClick={() => { accountClick(BRIDE_ACCOUNTS_DATA); }}
           >
             신부측 계좌번호
           </div>
