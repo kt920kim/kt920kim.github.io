@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Suspense } from "react";
 
 import DesignSight01 from "../../public/images/tokyo_21_21_design_sight_01.jpg";
 import styles from "./main.css";
@@ -12,7 +13,7 @@ import ShareMessage from "./components/ShareMessage";
 export default function Home() {
 
   return (
-    <>
+    <Suspense>
       <main className="flex min-h-screen flex-col items-center justify-between scrollbar-hide">
         <section className="main">
           <div className="mainsection-text w-full py-[40px] bg-white">
@@ -35,6 +36,6 @@ export default function Home() {
         {/* 메시지 공유하기 */}
         <ShareMessage />
       </main>
-    </>
+    </Suspense>
   );
 }
