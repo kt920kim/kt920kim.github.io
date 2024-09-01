@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useState } from 'react';
-// import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 

@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="ko">
       <head>
         {/* <title>김기태 & 박기영 결혼합니다</title> */}
+        <meta name="color-scheme" content="light" />
         <meta name="theme-color" content="#000000" />
         <meta property="og:title" content="김기태 & 박기영 결혼합니다." />
         <meta property="og:image" content="https://img.freepik.com/free-photo/groom-putting-ring-bride-s-finger_1157-338.jpg" />
