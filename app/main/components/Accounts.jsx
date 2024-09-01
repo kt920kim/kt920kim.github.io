@@ -40,7 +40,7 @@ const Accounts = () => {
             className="congratulatory-section-groom-btn flex text-center items-center justify-center gap-[10px] rounded-lg px-3 py-[10px] not-italic font-normal text-[15px] leading-[21px] uppercase font-S-Core_Dream"
             onClick={() => { accountClick(GROOM_ACCOUNTS_DATA); }}
           >
-            신랑층 계좌번호
+            신랑측 계좌번호
           </div>
         }
         {

@@ -75,20 +75,25 @@ const ImageGallery = () => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             {/* <span className="close" onClick={closeModal}>×</span> */}
             <Swiper
+              style={{
+                '--swiper-navigation-color': '#fff',
+                '--swiper-navigation-size': '22px',
+                '--swiper-pagination-color': '#fff',
+              }}
               // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={1}
+              navigation={true}
               pagination={{ clickable: true }}
-              scrollbar={{ draggable: true }}
-              onSwiper={(swiper) => console.log('onSwiper', swiper)}
-              onSlideChange={(swiper) => console.log('onSlideChange', swiper)}
+              // onSwiper={(swiper) => console.log('onSwiper', swiper)}
+              // onSlideChange={(swiper) => console.log('onSlideChange', swiper)}
             >
               {
                 ImageList.map((slideContent, index) => (
-                  <SwiperSlide key={slideContent.alt} virtualIndex={index}>
+                  <SwiperSlide key={index}>
                     <div className="image-container flex justify-center items-center h-full">
-                      <Image src={slideContent.src} alt={slideContent.alt} />
+                      <Image src={slideContent.src} alt={slideContent.alt} className="h-[400px] object-cover" />
                     </div>
                   </SwiperSlide>
                 ))
