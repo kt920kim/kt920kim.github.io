@@ -34,7 +34,7 @@ export default function Home() {
         {/* 계좌번호 공유하기  */}
         <Accounts />
         {/* 메시지 공유하기 */}
-        <ShareMessage />
+        {/* <ShareMessage /> */}
       </main>
     </Suspense>
   );
