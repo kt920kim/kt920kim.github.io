@@ -18,8 +18,6 @@ import ShibuyaStreet01 from "../../../public/images/tokyo_shibuya_street_01.jpg"
 import ShibuyaStreet02 from "../../../public/images/tokyo_shibuya_street_02.jpg";
 import TokyoTower01 from "../../../public/images/tokyo_tower_01.jpg";
 
-// SwiperCore.use([Navigation, Pagination]);
-
 const ImageList = [
   { src: DesignSight01, alt: "21_21 Design Sight 1" },
   { src: DesignSight02, alt: "21_21 Design Sight 2" },
@@ -75,13 +73,12 @@ const ImageGallery = () => {
       {modalOpen && (
         <div id="myModal" className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closeModal}>×</span>
+            {/* <span className="close" onClick={closeModal}>×</span> */}
             <Swiper
               // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={1}
-              // navigation
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
               onSwiper={(swiper) => console.log('onSwiper', swiper)}

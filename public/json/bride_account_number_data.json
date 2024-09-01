@@ -1,0 +1,17 @@
+{
+    "data" : [
+        {
+            "title" : "혼주 계좌",
+            "bank_name" : "",
+            "account_owner" : "박수현",
+            "account_number" : ""
+        },
+        {
+            "title" : "혼주 계좌",
+            "bank_name" : "",
+            "account_owner" : "이영숙",
+            "account_number" : ""
+        }
+
+    ]
+}

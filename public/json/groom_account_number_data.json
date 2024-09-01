@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "title" : "혼주 계좌",
+      "bank_name" : "국민은행",
+      "account_owner" : "김주영",
+      "account_number" : "066-010-163128"
+    },
+    {
+      "title" : "혼주 계좌",
+      "bank_name" : "국민은행",
+      "account_owner" : "정성란",
+      "account_number" : "066-240-335975"
+    }
+  ]
+}
