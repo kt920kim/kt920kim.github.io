@@ -14,17 +14,23 @@ import './ImageGallery.css';
 import DesignSight01 from "../../../public/images/tokyo_21_21_design_sight_01.jpg";
 import DesignSight02 from "../../../public/images/tokyo_21_21_design_sight_02.jpg";
 import DesignSight03 from "../../../public/images/tokyo_21_21_design_sight_03.jpg";
+import DesignSight04 from "../../../public/images/tokyo_21_21_design_sight_04.jpg";
 import ShibuyaStreet01 from "../../../public/images/tokyo_shibuya_street_01.jpg";
 import ShibuyaStreet02 from "../../../public/images/tokyo_shibuya_street_02.jpg";
+import ShibuyaStreet03 from "../../../public/images/tokyo_shibuya_street_03.jpg";
 import TokyoTower01 from "../../../public/images/tokyo_tower_01.jpg";
+import TokyoTower02 from "../../../public/images/tokyo_tower_02.jpg";
 
 const ImageList = [
   { src: DesignSight01, alt: "21_21 Design Sight 1" },
   { src: DesignSight02, alt: "21_21 Design Sight 2" },
   { src: DesignSight03, alt: "21_21 Design Sight 3" },
+  { src: DesignSight04, alt: "21_21 Design Sight 4" },
   { src: TokyoTower01, alt: "Tokyo Tower 1" },
+  { src: TokyoTower02, alt: "Tokyo Tower 2" },
   { src: ShibuyaStreet01, alt: "Shibuya Street 1" },
-  { src: ShibuyaStreet02, alt: "Shibuya Street 2" }
+  { src: ShibuyaStreet02, alt: "Shibuya Street 2" },
+  { src: ShibuyaStreet03, alt: "Shibuya Street 3" }
 ]
 
 const ImageGallery = () => {
@@ -51,24 +57,13 @@ const ImageGallery = () => {
 
   return (
     <>
-      <div className="basis-1/3" onClick={openModal}>
-        <Image src={DesignSight01} alt="Gallery 1" className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
-      </div>
-      <div className="basis-1/3" onClick={openModal}>
-        <Image src={DesignSight02} alt="Gallery 2" className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
-      </div>
-      <div className="basis-1/3" onClick={openModal}>
-        <Image src={DesignSight03} alt="Gallery 3" className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
-      </div>
-      <div className="basis-1/3" onClick={openModal}>
-        <Image src={TokyoTower01} alt="Gallery 4" className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
-      </div>
-      <div className="basis-1/3" onClick={openModal}>
-        <Image src={ShibuyaStreet01} alt="Gallery 5" className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
-      </div>
-      <div className="basis-1/3" onClick={openModal}>
-        <Image src={ShibuyaStreet02} alt="Gallery 6" className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
-      </div>
+      {
+        ImageList.map((item, index) => (
+          <div key={index} className="basis-1/3" onClick={openModal}>
+            <Image src={(item.src || "")} alt={(item?.alt || "")} className="gallery-image w-full h-[15vh] object-cover align-middle pb-[3px] px-[6px] overflow-clip clip-margin" />
+          </div>
+        ))
+      }
 
       {modalOpen && (
         <div id="myModal" className="modal" onClick={closeModal}>
@@ -86,8 +81,6 @@ const ImageGallery = () => {
               slidesPerView={1}
               navigation={true}
               pagination={{ clickable: true }}
-              // onSwiper={(swiper) => console.log('onSwiper', swiper)}
-              // onSlideChange={(swiper) => console.log('onSlideChange', swiper)}
             >
               {
                 ImageList.map((slideContent, index) => (
