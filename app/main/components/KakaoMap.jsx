@@ -1,5 +1,5 @@
 import Script from "next/script";
-import { Map, MapMarker  } from "react-kakao-maps-sdk";
+import { Map, MapMarker, StaticMap } from "react-kakao-maps-sdk";
 
 const KAKAO_SDK_URL = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.__NEXT_KAKAO_JAVASCRIPT_KEY}&libraries=services,clusterer&autoload=false`;
 
@@ -11,14 +11,19 @@ const KakaoMap = () => {
   return (
     <>
       <Script src={KAKAO_SDK_URL} strategy="beforeInteractive" />
-      <Map
+      {/* <Map
         center={position}
         style={{ width: "100%", height: "360px" }}
       >
         <MapMarker position={position}>
-          {/* <div className="" style={{ color: "#000" }}>플로렌스 오목교점</div> */}
         </MapMarker>
-      </Map>
+      </Map> */}
+      <StaticMap
+        center={position}
+        style={{ width: "100%", height: "360px" }}
+        level={3}
+        marker={position}
+      />
     </>
   );
 };
