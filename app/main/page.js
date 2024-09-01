@@ -8,7 +8,7 @@ import Invitation from "./components/Invitation";
 import Gallery from "./components/Gallery";
 import Location from "./components/Location";
 import Accounts from "./components/Accounts";
-import ShareMessage from "./components/ShareMessage";
+// import ShareMessage from "./components/ShareMessage";
 
 export default function Home() {
 
