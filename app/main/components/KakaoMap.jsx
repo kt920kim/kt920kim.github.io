@@ -5,25 +5,24 @@ const KAKAO_SDK_URL = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.__NE
 
 const KakaoMap = () => {
   /* 플로렌스 오목교점 위도(latitude), 경도(longitude) */
-  // position = { lat: 37.5232884, lng: 126.885202 };
   let position = { lat: 37.52330156722382, lng: 126.88513311460922 };
 
   return (
     <>
       <Script src={KAKAO_SDK_URL} strategy="beforeInteractive" />
-      {/* <Map
+      <Map
         center={position}
         style={{ width: "100%", height: "360px" }}
       >
         <MapMarker position={position}>
         </MapMarker>
-      </Map> */}
-      <StaticMap
+      </Map>
+      {/* <StaticMap
         center={position}
         style={{ width: "100%", height: "360px" }}
         level={3}
         marker={position}
-      />
+      /> */}
     </>
   );
 };

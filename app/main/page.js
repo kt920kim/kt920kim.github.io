@@ -8,7 +8,7 @@ import Invitation from "./components/Invitation";
 import Gallery from "./components/Gallery";
 import Location from "./components/Location";
 import Accounts from "./components/Accounts";
-// import ShareMessage from "./components/ShareMessage";
+import ShareMessage from "./components/ShareMessage";
 
 export default function Home() {
 
@@ -27,14 +27,14 @@ export default function Home() {
         </section>
         {/* 초대장 */}
         <Invitation />
-        {/* 갤러리 */}
-        <Gallery />
         {/* 오시는 길 */}
         <Location />
+        {/* 갤러리 */}
+        <Gallery />
         {/* 계좌번호 공유하기  */}
         <Accounts />
         {/* 메시지 공유하기 */}
-        {/* <ShareMessage /> */}
+        <ShareMessage />
       </main>
     </Suspense>
   );
