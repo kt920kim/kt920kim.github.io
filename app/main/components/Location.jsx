@@ -40,7 +40,7 @@ const Location = () => {
       <section className="location-how-publictrans w-full flex flex-col justify-center items-start gap-2 pt-3 px-5 pb-6">
         <div className="location-how-publictrans-section-text1 flex flex-col self-stretch font-extrabold text-[16px] leading-5 font-S-Core_Dream">대중교통</div>
         <ol className="location-how-publictrans-section-list list-decimal flex flex-col self-stretch justify-center items-start gap-1 pl-5 mb-4">
-          <li className="self-stretch not-italic font-normal text-[15px] leading-[21px] font-S-Core_Dream">지하철: 5호선 양평역 2번출구 직진 3번거리 (1층 우리은행건물)</li>
+          <li className="self-stretch not-italic font-normal text-[15px] leading-[21px] font-S-Core_Dream">지하철: 5호선 양평역 2번출구 직진 3분거리 (1층 우리은행건물)</li>
           <li className="self-stretch not-italic font-normal text-[15px] leading-[21px] font-S-Core_Dream">버스: 관악고등학교 정류소 하차 (640, 650, 5012, 5616, 6211, 6625, 6628, 6629, 6630, 6640B)</li>
         </ol>
       </section>
