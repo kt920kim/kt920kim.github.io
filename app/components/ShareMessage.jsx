@@ -7,8 +7,8 @@ import { useSearchParams } from "next/navigation"
 import React, { useState, useMemo } from "react";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-import KakaoTalk from "../../../public/images/kakaotalk.png";
-import Link from "../../../public/images/link.png";
+import KakaoTalk from "../../public/images/kakaotalk.png";
+import Link from "../../public/images/link.png";
 
 const ShareMessage = () => {
   const [webPageLink, setWebPageLink] = useState("");

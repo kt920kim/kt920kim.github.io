@@ -11,15 +11,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './ImageGallery.css';
 
-import DesignSight01 from "../../../public/images/tokyo_21_21_design_sight_01.jpg";
-import DesignSight02 from "../../../public/images/tokyo_21_21_design_sight_02.jpg";
-import DesignSight03 from "../../../public/images/tokyo_21_21_design_sight_03.jpg";
-import DesignSight04 from "../../../public/images/tokyo_21_21_design_sight_04.jpg";
-import ShibuyaStreet01 from "../../../public/images/tokyo_shibuya_street_01.jpg";
-import ShibuyaStreet02 from "../../../public/images/tokyo_shibuya_street_02.jpg";
-import ShibuyaStreet03 from "../../../public/images/tokyo_shibuya_street_03.jpg";
-import TokyoTower01 from "../../../public/images/tokyo_tower_01.jpg";
-import TokyoTower02 from "../../../public/images/tokyo_tower_02.jpg";
+import DesignSight01 from "../../public/images/tokyo_21_21_design_sight_01.jpg";
+import DesignSight02 from "../../public/images/tokyo_21_21_design_sight_02.jpg";
+import DesignSight03 from "../../public/images/tokyo_21_21_design_sight_03.jpg";
+import DesignSight04 from "../../public/images/tokyo_21_21_design_sight_04.jpg";
+import ShibuyaStreet01 from "../../public/images/tokyo_shibuya_street_01.jpg";
+import ShibuyaStreet02 from "../../public/images/tokyo_shibuya_street_02.jpg";
+import ShibuyaStreet03 from "../../public/images/tokyo_shibuya_street_03.jpg";
+import TokyoTower01 from "../../public/images/tokyo_tower_01.jpg";
+import TokyoTower02 from "../../public/images/tokyo_tower_02.jpg";
 
 const ImageList = [
   { src: DesignSight01, alt: "21_21 Design Sight 1" },

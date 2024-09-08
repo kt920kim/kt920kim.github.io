@@ -8,7 +8,6 @@ import Invitation from "../components/Invitation";
 import Gallery from "../components/Gallery";
 import Location from "../components/Location";
 import Accounts from "../components/Accounts";
-// import ShareMessage from "./components/ShareMessage";
 
 export default function Home() {
 
@@ -33,8 +32,6 @@ export default function Home() {
         <Location />
         {/* 계좌번호 공유하기  */}
         <Accounts />
-        {/* 메시지 공유하기 */}
-        {/* <ShareMessage /> */}
       </main>
     </Suspense>
   );

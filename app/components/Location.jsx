@@ -1,9 +1,8 @@
 import Image from "next/image";
 
-import KakaoMap from "./KakaoMap";
-import KakaoMapImage from "../../../public/images/kakaomap_static_image.jpg";
-import KakaoMapIcon from "../../../public/images/kakao_map_icon.webp";
-import NaverMapIcon from "../../../public/images/naver_map_icon.webp";
+import KakaoMapImage from "../../public/images/kakaomap_static_image.jpg";
+import KakaoMapIcon from "../../public/images/kakao_map_icon.webp";
+import NaverMapIcon from "../../public/images/naver_map_icon.webp";
 
 const Location = () => {
   return (
@@ -14,7 +13,6 @@ const Location = () => {
         </div>
       </section>
       <section className="location-map w-full flex flex-col px-5">
-        {/* <KakaoMap /> */}
         <Image src={KakaoMapImage} alt="카카오맵 정적 이미지" />
         <div className="flex flex-row justify-center items-center mt-2 mb-4">
           <div className="flex mr-4">

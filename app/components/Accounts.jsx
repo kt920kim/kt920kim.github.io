@@ -4,8 +4,8 @@ import { useSearchParams } from "next/navigation"
 import React, { useState, useMemo } from "react";
 
 import AccountModal from "./AccountModal";
-import GROOM_ACCOUNTS_DATA from "../../../public/json/groom_account_number_data.json";
-import BRIDE_ACCOUNTS_DATA from "../../../public/json/bride_account_number_data.json";
+import GROOM_ACCOUNTS_DATA from "../../public/json/groom_account_number_data.json";
+import BRIDE_ACCOUNTS_DATA from "../../public/json/bride_account_number_data.json";
 
 
 import "./Accounts.css";
