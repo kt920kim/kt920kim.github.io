@@ -24,7 +24,7 @@ export default function Page() {
     event.preventDefault();
 
     if (code1.toLowerCase() === 'k' && code2.toLowerCase() === 't' && code3.toLowerCase() === 'g' && code4.toLowerCase() === 'y') {
-      window.location.href = "/main";
+      window.location.href = "/bride";
     } else {
       //
       alert('다시 입력해주세요');

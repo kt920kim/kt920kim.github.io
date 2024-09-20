@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Invitation = () => {
   return (
-    <section className="invitation w-full flex flex-col items-center py-[60px] gap-1 bg-white">
+    <section className="invitation w-full flex flex-col items-center pt-[60px] pb-[30px] gap-1 bg-white">
       <div className="invitation-section-text1 flex text-center font-extrabold text-[15px] leading-[19px] mb-[32px] font-S-Core_Dream">
         초대합니다
       </div>

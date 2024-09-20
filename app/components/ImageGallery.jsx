@@ -20,14 +20,16 @@ import ShibuyaStreet02 from "../../public/images/tokyo_shibuya_street_02.jpg";
 import ShibuyaStreet03 from "../../public/images/tokyo_shibuya_street_03.jpg";
 import TokyoTower01 from "../../public/images/tokyo_tower_01.jpg";
 import TokyoTower02 from "../../public/images/tokyo_tower_02.jpg";
+import TokyoTower03 from "../../public/images/tokyo_tower_03.jpg";
 
 const ImageList = [
-  { src: DesignSight01, alt: "21_21 Design Sight 1" },
+  // { src: DesignSight01, alt: "21_21 Design Sight 1" },
   { src: DesignSight02, alt: "21_21 Design Sight 2" },
   { src: DesignSight03, alt: "21_21 Design Sight 3" },
   { src: DesignSight04, alt: "21_21 Design Sight 4" },
   { src: TokyoTower01, alt: "Tokyo Tower 1" },
   { src: TokyoTower02, alt: "Tokyo Tower 2" },
+  { src: TokyoTower03, alt: "Tokyo Tower 3" },
   { src: ShibuyaStreet01, alt: "Shibuya Street 1" },
   { src: ShibuyaStreet02, alt: "Shibuya Street 2" },
   { src: ShibuyaStreet03, alt: "Shibuya Street 3" }
@@ -39,7 +41,6 @@ const ImageGallery = () => {
   const openModal = (event) => {
     const { target: element } = event;
 
-    // console.log(target.querySelector('img').alt);
     if (element?.tagName === 'IMG') {
       console.log(element.alt);
     } else {
