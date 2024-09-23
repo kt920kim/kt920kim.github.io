@@ -6,7 +6,7 @@ import HeartIcon from  "../public/images/heart.png";
 import { useEffect, useState } from "react";
 
 /**
- * `app/entry/page.js` is the UI for the `/entry` URL
+ * ex) `app/entry/page.js` is the UI for the `/entry` URL
  */
 
 export default function Page() {
