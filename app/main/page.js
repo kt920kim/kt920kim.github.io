@@ -12,10 +12,8 @@ import Accounts from "../components/Accounts";
 
 export const metadata = {
   title: '김기태 & 박기영 결혼합니다.',
-  description: '',
   openGraph: {
     title: '김기태 & 박기영 결혼합니다.',
-    image: 'https://img.freepik.com/free-photo/groom-putting-ring-bride-s-finger_1157-338.jpg',
     description: '10월 19일 11시 30분 플로렌스 오목교점'
   }
 }

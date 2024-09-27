@@ -9,7 +9,6 @@ export const metadata = {
   description: '',
   openGraph: {
     title: '김기태 & 박기영 결혼합니다.',
-    image: 'https://img.freepik.com/free-photo/groom-putting-ring-bride-s-finger_1157-338.jpg',
     description: ''
   }
 };
@@ -20,6 +19,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="color-scheme" content="light" />
         <meta name="theme-color" content="#000000" />
+        <meta property="og:image" content="https://img.freepik.com/free-photo/groom-putting-ring-bride-s-finger_1157-338.jpg" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
