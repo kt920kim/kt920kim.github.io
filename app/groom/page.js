@@ -6,6 +6,7 @@ import styles from "./main.css";
 
 import ImageGallery from "../components/ImageGallery";
 import Accounts from "../components/Accounts";
+import GuestBook from "../components/GuestBook";
 
 export const metadata = {
   title: '김기태 & 박기영 결혼합니다.',
@@ -42,11 +43,12 @@ export default function Page() {
             갤러리
           </div>
         </section>
-        <section className="gallery-image-list flex flex-wrap">
+        <section className="gallery-image-list flex flex-wrap mx-2">
           <ImageGallery />
         </section>
         {/* 계좌번호 공유하기  */}
         {/* <Accounts /> */}
+        <GuestBook />
       </main>
     </Suspense>
   );
