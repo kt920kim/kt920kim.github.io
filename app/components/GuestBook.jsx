@@ -29,8 +29,8 @@ const Guestbook = () => {
 
   return (
     <>
-      <section className="guestbook w-full flex justify-center pt-[40px] pb-10">
-        <div className="guestbook-title text-center text-[15px] font-extrabold leading-[21px] uppercase font-S-Core_Dream">
+      <section className="guestbook w-full flex justify-center pt-[20px] pb-9">
+        <div className="guestbook-title text-center text-[20px] font-extrabold leading-6 uppercase font-S-Core_Dream">
           방명록
         </div>
       </section>
@@ -54,7 +54,7 @@ const Guestbook = () => {
         </div>
       </section>
       <section className="guestbook w-full">
-        <div className="guestbook-message-list w-full flex flex-col">
+        <div className="guestbook-message-list w-full flex flex-col mb-5">
           <ul>
             {entries.map((entry, index) => (
               <li key={index} className="rounded border-solid border-2 border-gray-300 mx-2 mb-2 py-1 px-4">
@@ -65,7 +65,7 @@ const Guestbook = () => {
           </ul>
         </div>
       </section>
-    </>
+      </>
   );
 }
 
