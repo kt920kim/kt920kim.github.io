@@ -29,10 +29,15 @@ export default function Page() {
             초대합니다
           </div> */}
           <div className="invitation-section-text2 text-center font-normal text-[16px] leading-[26px] mb-[32px] font-S-Core_Dream">
-            저희 결혼 소식을 전해드리게 되어 기쁩니다.<br/>
-            결혼식은 가족끼리 조촐하게 진행할 예정입니다.<br/>
-            이해해 주시길 바라며, 축복해 주시면 감사하겠습니다.<br/>
-            항상 건강하시고 평안하시길 기원합니다.<br/>
+            2024년 10월 19일<br/>
+            <br/>
+            저희 두 사람,<br/>
+            인생의 동반자로서 첫 걸음을 내딛습니다.<br/>
+            서로를 존중하고 배려하며,<br/>
+            감사하는 마음으로 평생 함께 살아가겠습니다.<br/>
+            새로운 시작을 축복해 주시길 부탁드립니다.<br/>
+            축하해 주시는 모든 분의 가정에도<br/>
+            항상 행복이 가득하길 기원합니다.<br/>
             <br/>
             신랑 김기태, 신부 박기영 올림<br/>
           </div>
