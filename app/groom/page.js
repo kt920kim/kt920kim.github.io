@@ -39,11 +39,11 @@ export default function Page() {
         </section>
         {/* 갤러리 */}
         <section className="gallery w-full flex justify-center items-center gap-[10px] pt-[20px] pb-9">
-          <div className="gallery-section-text text-center text-[15px] font-extrabold leading-[21px] uppercase font-S-Core_Dream">
+          <div className="gallery-section-text text-center text-[20px] font-extrabold leading-6 uppercase font-S-Core_Dream">
             갤러리
           </div>
         </section>
-        <section className="gallery-image-list flex flex-wrap mx-2">
+        <section className="gallery-image-list flex flex-wrap mx-2 mb-[32px]">
           <ImageGallery />
         </section>
         {/* 계좌번호 공유하기  */}

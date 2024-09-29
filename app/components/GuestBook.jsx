@@ -6,12 +6,24 @@ const Guestbook = () => {
   const [entries, setEntries] = useState([]);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [isFirst, setIsFirst] = useState(true);
+  const [isLast, setIsLast] = useState(false);
+  const limit = 5;
 
   useEffect(() => {
-    fetch('/api/guestbook')
-      .then(response => response.json())
-      .then(data => setEntries(data));
-  }, []);
+    const fetchEntries = async () => {
+      const response = await fetch(`/api/guestbook?page=${page}&limit=${limit}`);
+      const { data: newEntries, total } = await response.json();
+      setEntries(newEntries);
+      setTotal(total);
+      setIsFirst(page === 1);
+      setIsLast(page * limit >= total);
+    };
+
+    fetchEntries();
+  }, [page]);
 
   const addEntry = async () => {
     const response = await fetch('/api/guestbook', {
@@ -22,7 +34,13 @@ const Guestbook = () => {
       body: JSON.stringify({ name, message, date: (new Date()).toLocaleString() }),
     });
     const newEntry = await response.json();
-    setEntries([...entries, newEntry]);
+    const updatedEntries = [...entries, newEntry];
+    const nextPage = ((updatedEntries.length / limit) > 1) ? page + 1 : page;
+    if (page < nextPage) {
+      setPage(nextPage);
+    } else {
+      setEntries(updatedEntries);
+    }
     setName('');
     setMessage('');
   };
@@ -50,19 +68,40 @@ const Guestbook = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button className="rounded bg-gray-800 text-gray-100 text-[15px] leading-10" onClick={addEntry}>축하메시지 남기기</button>
+          <button className="rounded bg-gray-600 text-gray-100 text-[15px] leading-10" onClick={addEntry}>축하메시지 남기기</button>
         </div>
       </section>
       <section className="guestbook w-full">
         <div className="guestbook-message-list w-full flex flex-col mb-5">
           <ul>
             {entries.map((entry, index) => (
-              <li key={index} className="rounded border-solid border-2 border-gray-300 mx-2 mb-2 py-1 px-4">
+              // <li key={index} className="rounded border-solid border-2 border-gray-300 mx-2 mb-2 px-4 py-1">
+              <li key={index} className="rounded bg-red-50 mx-2 mb-2 px-4 py-1">
                 <div className="flex justify-between"><strong>{entry.name}</strong><span className="text-gray-400 text-[13px]">{entry.date}</span></div>
                 <div>{entry.message}</div>
               </li>
             ))}
           </ul>
+          {
+            total > limit ? (
+            <div className="mx-2 flex flex-row">
+              <button
+                className={`basis-1/2 rounded ${isFirst ? 'bg-gray-300' : 'bg-gray-600'} text-gray-100 text-[15px] leading-10 mr-1`}
+                disabled={isFirst}
+                onClick={() => setPage(page - 1) }
+              >
+                이전
+              </button>
+              <button
+                className={`basis-1/2 rounded ${isLast ? 'bg-gray-300' : 'bg-gray-600'} text-gray-100 text-[15px] leading-10`}
+                disabled={isLast}
+                onClick={() => setPage(page + 1)}
+              >
+                다음
+              </button>
+            </div>
+            ) : null
+          }
         </div>
       </section>
       </>
