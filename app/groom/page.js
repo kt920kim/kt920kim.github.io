@@ -51,9 +51,9 @@ export default function Page() {
         <section className="gallery-image-list flex flex-wrap mx-2 mb-[32px]">
           <ImageGallery />
         </section>
-        {/* 계좌번호 공유하기  */}
-        {/* <Accounts /> */}
         <GuestBook />
+        {/* 계좌번호 공유하기  */}
+        <Accounts />
       </main>
     </Suspense>
   );
