@@ -4,9 +4,8 @@ import { Suspense } from "react";
 import DesignSight01 from "../../public/images/tokyo_21_21_design_sight_01.jpg";
 import styles from "./main.css";
 
-import Invitation from "../components/Invitation";
-import Gallery from "../components/Gallery";
-import Location from "../components/Location";
+import ImageGallery from "../components/ImageGallery";
+import GuestBook from "../components/GuestBook";
 
 export const metadata = {
   title: '김기태 & 박기영 결혼합니다.',
@@ -19,23 +18,36 @@ export default function Page() {
 
   return (
     <Suspense>
-      <main className="flex min-h-screen flex-col items-center justify-between scrollbar-hide">
+      <main className="flex flex-col items-center justify-between scrollbar-hide">
         <section className="main">
-          <div className="mainsection-text w-full py-[40px] bg-white">
-            {/* <div className="mainsection-text-1 flex flex-col text-center mb-[10px] leading-[26px] text-[16px] font-normal font-S-Core_Dream">초대합니다</div> */}
-            <div className="mainsection-text-2 flex justify-center items-center mb-[28px] leading-[32px] text-[29px] tracking-[-0.32px] font-semibold font-S-Core_Dream">
-              김기태 <span className="text2-inner mr-[5px] font-S-Core_Dream"> & </span> 박기영
-            </div>
-            <div className="mainsection-text-3 text-center text-[18px] leading-[25px] tracking-[-0.18px] font-[550] font-S-Core_Dream">2024. 10. 19 토요일 오전 11시 30분<br/>플로렌스 오목교점 튜울립홀</div>
-          </div>
           <Image className="object-scale-down" src={DesignSight01} alt="Main Picture" priority />
         </section>
-        {/* 초대장 */}
-        <Invitation />
+        {/* 감사 인사 */}
+        <section className="invitation w-full flex flex-col items-center py-[30px] gap-1 bg-white">
+          <div className="invitation-section-text2 text-center font-normal text-[16px] leading-[26px] mb-[32px] font-S-Core_Dream">
+            2024년 10월 19일<br/>
+            <br/>
+            저희 두 사람,<br/>
+            인생의 동반자로서 첫 걸음을 내딛습니다.<br/>
+            서로를 존중하고 배려하며,<br/>
+            감사하는 마음으로 평생 함께 살아가겠습니다.<br/>
+            새로운 시작을 축복해 주시길 부탁드립니다.<br/>
+            축하해 주시는 모든 분의 가정에도<br/>
+            항상 행복이 가득하길 기원합니다.<br/>
+            <br/>
+            신랑 김기태, 신부 박기영 올림<br/>
+          </div>
+        </section>
         {/* 갤러리 */}
-        <Gallery />
-        {/* 오시는 길 */}
-        <Location />
+        <section className="gallery w-full flex justify-center items-center gap-[10px] pt-[20px] pb-9">
+          <div className="gallery-section-text text-center text-[20px] font-extrabold leading-6 uppercase font-S-Core_Dream">
+            갤러리
+          </div>
+        </section>
+        <section className="gallery-image-list flex flex-wrap mx-2 mb-[32px]">
+          <ImageGallery />
+        </section>
+        <GuestBook />
       </main>
     </Suspense>
   );
