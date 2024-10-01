@@ -11,6 +11,9 @@ if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {
 
 
 export async function GET() {
-  const fileContents = fs.truncateSync(dataFilePath);
+  const fileContents = fs.readFileSync(dataFilePath, { encoding: 'utf8', flag: 'a+' });
+  if (fileContents) {
+    fs.truncateSync(dataFilePath);
+  }
   return NextResponse.json('');
 }
