@@ -14,7 +14,7 @@ const Guestbook = () => {
 
   useEffect(() => {
     const fetchEntries = async () => {
-      const response = await fetch(`/api/tmp-guestbook?page=${page}&limit=${limit}`);
+      const response = await fetch(`/api/redis-guestbook?page=${page}&limit=${limit}`);
       const { data: newEntries, total } = await response.json();
       setEntries(newEntries);
       setTotal(total);
@@ -36,7 +36,7 @@ const Guestbook = () => {
       return;
     }
 
-    const response = await fetch('/api/tmp-guestbook', {
+    const response = await fetch('/api/redis-guestbook', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
