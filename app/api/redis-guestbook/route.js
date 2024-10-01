@@ -45,6 +45,7 @@ export async function POST(req) {
   } catch (err) {
     console.error(`failed to get ${GUESTBOOK_REDIS_KEY}`, err);
   } finally {
+    entries = entries || [];
     newEntries = entries.concat(newEntry);
   }
 
