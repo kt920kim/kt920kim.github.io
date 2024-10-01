@@ -14,6 +14,13 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+
+  input#H,
+  input#I,
+  input#N,
+  input#T {
+    color: black
+  }
 }
 
 body {
@@ -32,7 +39,6 @@ body {
     text-wrap: balance;
   }
 }
-
 
 @layer base {
   @font-face {
