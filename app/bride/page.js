@@ -23,7 +23,7 @@ export default function Page() {
           <Image className="object-scale-down" src={DesignSight01} alt="Main Picture" priority />
         </section>
         {/* 감사 인사 */}
-        <section className="invitation w-full flex flex-col items-center py-[30px] gap-1 bg-white">
+        <section className="invitation w-full flex flex-col items-center py-[30px] gap-1">
           <div className="invitation-section-text2 text-center font-normal text-[16px] leading-[26px] mb-[32px] font-S-Core_Dream">
             2024년 10월 19일<br/>
             <br/>

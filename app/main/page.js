@@ -24,7 +24,7 @@ export default function Page() {
     <Suspense>
       <main className="flex min-h-screen flex-col items-center justify-between scrollbar-hide">
         <section className="main">
-          <div className="mainsection-text w-full py-[40px] bg-white">
+          <div className="mainsection-text w-full py-[40px]">
             {/* <div className="mainsection-text-1 flex flex-col text-center mb-[10px] leading-[26px] text-[16px] font-normal font-S-Core_Dream">초대합니다</div> */}
             <div className="mainsection-text-2 flex justify-center items-center mb-[28px] leading-[32px] text-[29px] tracking-[-0.32px] font-semibold font-S-Core_Dream">
               김기태 <span className="text2-inner mr-[5px] font-S-Core_Dream"> & </span> 박기영
@@ -35,7 +35,7 @@ export default function Page() {
         </section>
         {/* 초대장 */}
         {/* <Invitation /> */}
-        <section className="invitation w-full flex flex-col items-center pt-[60px] pb-[30px] gap-1 bg-white">
+        <section className="invitation w-full flex flex-col items-center pt-[60px] pb-[30px] gap-1">
           <div className="invitation-section-text1 flex text-center font-extrabold text-[15px] leading-[19px] mb-[32px] font-S-Core_Dream">
             초대합니다
           </div>

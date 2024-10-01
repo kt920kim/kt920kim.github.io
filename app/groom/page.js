@@ -24,7 +24,7 @@ export default function Page() {
           <Image className="object-scale-down" src={DesignSight01} alt="Main Picture" priority />
         </section>
         {/* 감사 인사 */}
-        <section className="invitation w-full flex flex-col items-center py-[30px] gap-1 bg-white">
+        <section className="invitation w-full flex flex-col items-center py-[30px] gap-1">
           {/* <div className="invitation-section-text1 flex text-center font-extrabold text-[15px] leading-[19px] mb-[32px] font-S-Core_Dream">
             초대합니다
           </div> */}
