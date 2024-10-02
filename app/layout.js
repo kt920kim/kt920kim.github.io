@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 
@@ -21,7 +22,10 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#000000" />
         <meta property="og:image" content="https://img.freepik.com/free-photo/groom-putting-ring-bride-s-finger_1157-338.jpg" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
