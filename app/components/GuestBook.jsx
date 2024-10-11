@@ -26,6 +26,16 @@ const Guestbook = () => {
   }, [page]);
 
   const addEntry = async () => {
+    if (!name || name.length === 0) {
+      alert("이름을 입력해주세요.")
+      return;
+    }
+
+    if (!message || message.length === 0) {
+      alert("축하메시지를 입력해주세요.")
+      return;
+    }
+
     const response = await fetch('/api/guestbook', {
       method: 'POST',
       headers: {
