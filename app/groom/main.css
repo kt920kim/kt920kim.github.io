@@ -10,6 +10,10 @@ body {
     color: #fff;
   }
 
+  .guestbook-message-form input {
+    color: #000;
+  }
+
   .guestbook-message-list li {
     background-color: rgb(51 65 85);
   }
